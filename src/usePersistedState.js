@@ -33,7 +33,7 @@ const usePersistedState = (initialState, key, { get, set }) => {
     const newStateValue = typeof newState === 'function' ? newState(state) : newState;
 
     // persist to localStorage
-    set(key, newState);
+    set(key, newStateValue);
 
     setState(newStateValue);
 
